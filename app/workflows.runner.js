@@ -13,28 +13,6 @@ window.DPRWorkflowRunner = (function () {
       },
     },
     {
-      key: 'daily-month-skims',
-      id: 'daily-paper-reader.yml',
-      name: '立即爬取并处理论文（一个月）',
-      desc: '回溯 30 天并使用全速读（skims）模式生成结果。',
-      dispatchInputs: {
-        run_enrich: 'false',
-        fetch_days: '30',
-        fetch_mode: 'skims',
-      },
-    },
-    {
-      key: 'daily-month-standard',
-      id: 'daily-paper-reader.yml',
-      name: '立即爬取并处理论文（一个月标准）',
-      desc: '回溯 30 天并使用标准模式生成结果。',
-      dispatchInputs: {
-        run_enrich: 'false',
-        fetch_days: '30',
-        fetch_mode: 'standard',
-      },
-    },
-    {
       key: 'sync',
       id: 'sync.yml',
       name: '同步上游代码',
@@ -57,7 +35,7 @@ window.DPRWorkflowRunner = (function () {
       },
     },
     '30': {
-      key: 'daily-month-skims',
+      key: 'daily-now',
       dispatchInputs: {
         run_enrich: 'false',
         fetch_days: '30',
@@ -65,7 +43,7 @@ window.DPRWorkflowRunner = (function () {
       },
     },
     '30-skims': {
-      key: 'daily-month-skims',
+      key: 'daily-now',
       dispatchInputs: {
         run_enrich: 'false',
         fetch_days: '30',
@@ -73,7 +51,7 @@ window.DPRWorkflowRunner = (function () {
       },
     },
     '30-standard': {
-      key: 'daily-month-standard',
+      key: 'daily-now',
       dispatchInputs: {
         run_enrich: 'false',
         fetch_days: '30',
@@ -180,21 +158,9 @@ window.DPRWorkflowRunner = (function () {
 
   const resolveRecentRunTag = async (owner, repo, token, run) => {
     if (!run) return 'daily-now';
-    const inputs = run.inputs && typeof run.inputs === 'object'
-      ? run.inputs
-      : (await resolveWorkflowRunInputs(owner, repo, token, run.id));
-    if (!inputs || typeof inputs !== 'object') return 'daily-now';
-    const fetchDays = String(inputs.fetch_days || '').trim();
-    const fetchMode = String(inputs.fetch_mode || '').trim().toLowerCase();
-    if (fetchDays === '30') {
-      if (fetchMode === 'standard') {
-        return 'daily-month-standard';
-      }
-      if (fetchMode === 'skims') {
-        return 'daily-month-skims';
-      }
-      return 'daily-month-skims';
-    }
+    // 统一归类到 daily-now，触发面板不再单独展示一个月/一个月标准入口
+    if (run.inputs && typeof run.inputs === 'object') return 'daily-now';
+    await resolveWorkflowRunInputs(owner, repo, token, run.id);
     return 'daily-now';
   };
 
@@ -449,35 +415,19 @@ window.DPRWorkflowRunner = (function () {
 
       const dailyFileRuns = runsByWorkflowId['daily-paper-reader.yml'] || [];
       const dailyNowRuns = [];
-      const dailyMonthRuns = [];
-      const dailyMonthStandardRuns = [];
       if (dailyFileRuns.length > 0) {
         const tagged = await Promise.all(
           dailyFileRuns.map((run) =>
             resolveRecentRunTag(owner, repo, token, run).then((runTag) => ({ run, runTag })),
           ),
         );
-        tagged.forEach(({ run, runTag }) => {
-          if (runTag === 'daily-month-skims') {
-            dailyMonthRuns.push(run);
-          } else if (runTag === 'daily-month-standard') {
-            dailyMonthStandardRuns.push(run);
-          } else {
-            dailyNowRuns.push(run);
-          }
+        tagged.forEach(({ run }) => {
+          dailyNowRuns.push(run);
         });
       }
 
       WORKFLOWS.forEach((wf) => {
         const wfId = String(wf.id || '');
-        if (wf.id === 'daily-paper-reader.yml' && wf.key === 'daily-month-skims') {
-          byWorkflow[String(wf.key)] = dailyMonthRuns.slice(0, 3);
-          return;
-        }
-        if (wf.id === 'daily-paper-reader.yml' && wf.key === 'daily-month-standard') {
-          byWorkflow[String(wf.key)] = dailyMonthStandardRuns.slice(0, 3);
-          return;
-        }
         if (wf.id === 'daily-paper-reader.yml' && wf.key === 'daily-now') {
           byWorkflow[String(wf.key)] = dailyNowRuns.slice(0, 3);
           return;
