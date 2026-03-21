@@ -1,0 +1,51 @@
+{
+  "label": "2026-03-21",
+  "date": "2026-03-21",
+  "generated_at": "2026-03-21T19:42:59",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202603/21/2603.14535v1-visualizing-critic-match-loss-landscapes-for-interpretation-of-online-reinforcement-learning-control-algorithms",
+      "section": "quick",
+      "title_en": "Visualizing Critic Match Loss Landscapes for Interpretation of Online Reinforcement Learning Control Algorithms",
+      "authors": "Jingyi Liu, Jian Guo, Eberhard Gill",
+      "date": "2026-03-15",
+      "pdf": "https://arxiv.org/pdf/2603.14535v1",
+      "score": "6.0",
+      "evidence": "在线强化学习控制的解释",
+      "tldr": "针对在线强化学习在动态控制中性能不稳定且缺乏解释性的问题，本文提出了一种Critic匹配损失景观可视化方法。该方法通过将Critic参数轨迹投影到低维空间，构建三维损失曲面和二维优化路径，并引入定量指标评估训练效果。在倒立摆和航天器姿态控制任务上的实验表明，该方法能有效揭示Critic优化行为，区分稳定收敛与不稳定学习状态，为算法分析提供了新工具。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Reinforcement learning has proven its power on various occasions. However, its performance is not always guaranteed when system dynamics change. Instead, it largely relies on users' empirical experience. For reinforcement learning algorithms with an actor-critic structure, the critic neural network reflects the approximation and optimization process in the RL algorithm. Analyzing the performance of the critic neural network helps to understand the mechanism of the algorithm. To support systematic interpretation of such algorithms in dynamic control problems, this work proposes a critic match loss landscape visualization method for online reinforcement learning. The method constructs a loss landscape by projecting recorded critic parameter trajectories onto a low-dimensional linear subspace. The critic match loss is evaluated over the projected parameter grid using fixed reference state samples and temporal-difference targets. This yields a three-dimensional loss surface together with a two-dimensional optimization path that characterizes critic learning behavior. To extend analysis beyond visual inspection, quantitative landscape indices and a normalized system performance index are introduced, enabling structured comparison across different training outcomes. The approach is demonstrated using the Action-Dependent Heuristic Dynamic Programming algorithm on cart-pole and spacecraft attitude control tasks. Comparative analyses across projection methods and training stages reveal distinct landscape characteristics associated with stable convergence and unstable learning. The proposed framework enables both qualitative and quantitative interpretation of critic optimization behavior in online reinforcement learning.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/21/2603.16842v1-stochastic-resetting-accelerates-policy-convergence-in-reinforcement-learning",
+      "section": "quick",
+      "title_en": "Stochastic Resetting Accelerates Policy Convergence in Reinforcement Learning",
+      "authors": "Jello Zhou, Vudtiwat Ngampruetikorn, David J. Schwab",
+      "date": "2026-03-17",
+      "pdf": "https://arxiv.org/pdf/2603.16842v1",
+      "score": "6.0",
+      "evidence": "强化学习控制中的随机重置",
+      "tldr": "本研究将统计力学中的随机重置（Stochastic Resetting）机制引入强化学习。通过在学习过程中间歇性地将智能体返回初始状态，研究发现该机制能显著加速策略收敛。在表格化环境和深度强化学习任务中，随机重置通过截断冗长且无信息的轨迹，增强了价值传播效率。与时间折扣不同，它在加速收敛的同时能保持最优策略不变，为解决稀疏奖励和困难探索问题提供了新思路。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Stochastic resetting, where a dynamical process is intermittently returned to a fixed reference state, has emerged as a powerful mechanism for optimizing first-passage properties. Existing theory largely treats static, non-learning processes. Here we ask how stochastic resetting interacts with reinforcement learning, where the underlying dynamics adapt through experience. In tabular grid environments, we find that resetting accelerates policy convergence even when it does not reduce the search time of a purely diffusive agent, indicating a novel mechanism beyond classical first-passage optimization. In a continuous control task with neural-network-based value approximation, we show that random resetting improves deep reinforcement learning when exploration is difficult and rewards are sparse. Unlike temporal discounting, resetting preserves the optimal policy while accelerating convergence by truncating long, uninformative trajectories to enhance value propagation. Our results establish stochastic resetting as a simple, tunable mechanism for accelerating learning, translating a canonical phenomenon of statistical mechanics into an optimization principle for reinforcement learning.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/21/2603.16929v1-mhpo-modulated-hazard-aware-policy-optimization-for-stable-reinforcement-learning",
+      "section": "quick",
+      "title_en": "MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning",
+      "authors": "Hongjun Wang, Wei Liu, Weibo Gu, Xing Sun, Kai Han",
+      "date": "2026-03-14",
+      "pdf": "https://arxiv.org/pdf/2603.16929v1",
+      "score": "6.0",
+      "evidence": "用于稳定控制优化的强化学习",
+      "tldr": "针对GRPO框架中重要性比率调节不稳定的挑战，本文提出MHPO框架。该框架通过对数保真度调制器（LFM）将比率映射至有界可微空间以确保梯度稳定性，并引入解耦风险惩罚（DHP）利用生存分析原理独立调节正负策略偏移。MHPO在提升训练稳健性的同时，有效防止了模式崩溃和策略侵蚀，在多项推理任务中表现优异。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Regulating the importance ratio is critical for the training stability of Group Relative Policy Optimization (GRPO) based frameworks. However, prevailing ratio control methods, such as hard clipping, suffer from non-differentiable boundaries and vanishing gradient regions, failing to maintain gradient fidelity. Furthermore, these methods lack a hazard-aware mechanism to adaptively suppress extreme deviations, leaving the optimization process vulnerable to abrupt policy shifts. To address these challenges, we propose Modulated Hazard-aware Policy Optimization (MHPO), a novel framework designed for robust and stable reinforcement learning. The proposed MHPO introduces a Log-Fidelity Modulator (LFM) to map unbounded importance ratios into a bounded, differentiable domain. This mechanism effectively prevents high-variance outlier tokens from destabilizing the loss landscape while ensuring global gradient stability. Complementarily, a Decoupled Hazard Penalty (DHP) integrates cumulative hazard functions from survival analysis to independently regulate positive and negative policy shifts. By shaping the optimization landscape with hazard-aware penalties, the proposed MHPO achieves fine-grained regulation of asymmetric policy shifts simultaneously mitigating mode collapse from over-expansion and preventing policy erosion from catastrophic contraction within a stabilized trust region. Extensive evaluations on diverse reasoning benchmarks across both text-based and vision-language tasks demonstrate that MHPO consistently outperforms existing methods, achieving superior performance while significantly enhancing training stability.",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

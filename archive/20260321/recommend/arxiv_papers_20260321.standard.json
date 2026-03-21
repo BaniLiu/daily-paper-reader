@@ -1,0 +1,135 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-21T19:42:32.034787+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 0,
+    "deep_cap": 6,
+    "deep_selected": 0,
+    "quick_candidates": 3,
+    "quick_skim_target": 11,
+    "quick_selected": 3
+  },
+  "deep_dive": [],
+  "quick_skim": [
+    {
+      "id": "2603.14535v1",
+      "title": "Visualizing Critic Match Loss Landscapes for Interpretation of Online Reinforcement Learning Control Algorithms",
+      "abstract": "Reinforcement learning has proven its power on various occasions. However, its performance is not always guaranteed when system dynamics change. Instead, it largely relies on users' empirical experience. For reinforcement learning algorithms with an actor-critic structure, the critic neural network reflects the approximation and optimization process in the RL algorithm. Analyzing the performance of the critic neural network helps to understand the mechanism of the algorithm. To support systematic interpretation of such algorithms in dynamic control problems, this work proposes a critic match loss landscape visualization method for online reinforcement learning. The method constructs a loss landscape by projecting recorded critic parameter trajectories onto a low-dimensional linear subspace. The critic match loss is evaluated over the projected parameter grid using fixed reference state samples and temporal-difference targets. This yields a three-dimensional loss surface together with a two-dimensional optimization path that characterizes critic learning behavior. To extend analysis beyond visual inspection, quantitative landscape indices and a normalized system performance index are introduced, enabling structured comparison across different training outcomes. The approach is demonstrated using the Action-Dependent Heuristic Dynamic Programming algorithm on cart-pole and spacecraft attitude control tasks. Comparative analyses across projection methods and training stages reveal distinct landscape characteristics associated with stable convergence and unstable learning. The proposed framework enables both qualitative and quantitative interpretation of critic optimization behavior in online reinforcement learning.",
+      "authors": [
+        "Jingyi Liu",
+        "Jian Guo",
+        "Eberhard Gill"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "published": "2026-03-15T18:20:12+00:00",
+      "link": "https://arxiv.org/pdf/2603.14535v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Interpretation of online reinforcement learning control",
+      "llm_evidence_cn": "在线强化学习控制的解释",
+      "llm_evidence": "在线强化学习控制的解释",
+      "canonical_evidence": "在线强化学习控制的解释",
+      "llm_tldr_en": "Visualizes critic loss landscapes to interpret reinforcement learning performance in dynamic control.",
+      "llm_tldr_cn": "通过可视化评论家损失景观来解释动态控制中强化学习的性能。",
+      "llm_tldr": "通过可视化评论家损失景观来解释动态控制中强化学习的性能。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16842v1",
+      "title": "Stochastic Resetting Accelerates Policy Convergence in Reinforcement Learning",
+      "abstract": "Stochastic resetting, where a dynamical process is intermittently returned to a fixed reference state, has emerged as a powerful mechanism for optimizing first-passage properties. Existing theory largely treats static, non-learning processes. Here we ask how stochastic resetting interacts with reinforcement learning, where the underlying dynamics adapt through experience. In tabular grid environments, we find that resetting accelerates policy convergence even when it does not reduce the search time of a purely diffusive agent, indicating a novel mechanism beyond classical first-passage optimization. In a continuous control task with neural-network-based value approximation, we show that random resetting improves deep reinforcement learning when exploration is difficult and rewards are sparse. Unlike temporal discounting, resetting preserves the optimal policy while accelerating convergence by truncating long, uninformative trajectories to enhance value propagation. Our results establish stochastic resetting as a simple, tunable mechanism for accelerating learning, translating a canonical phenomenon of statistical mechanics into an optimization principle for reinforcement learning.",
+      "authors": [
+        "Jello Zhou",
+        "Vudtiwat Ngampruetikorn",
+        "David J. Schwab"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cond-mat.dis-nn",
+        "cond-mat.stat-mech",
+        "eess.SY",
+        "physics.bio-ph"
+      ],
+      "published": "2026-03-17T17:50:32+00:00",
+      "link": "https://arxiv.org/pdf/2603.16842v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Stochastic resetting in reinforcement learning for control",
+      "llm_evidence_cn": "强化学习控制中的随机重置",
+      "llm_evidence": "强化学习控制中的随机重置",
+      "canonical_evidence": "强化学习控制中的随机重置",
+      "llm_tldr_en": "Explores how stochastic resetting accelerates policy convergence in reinforcement learning tasks.",
+      "llm_tldr_cn": "探讨了随机重置如何加速强化学习任务中的策略收敛。",
+      "llm_tldr": "探讨了随机重置如何加速强化学习任务中的策略收敛。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16929v1",
+      "title": "MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning",
+      "abstract": "Regulating the importance ratio is critical for the training stability of Group Relative Policy Optimization (GRPO) based frameworks. However, prevailing ratio control methods, such as hard clipping, suffer from non-differentiable boundaries and vanishing gradient regions, failing to maintain gradient fidelity. Furthermore, these methods lack a hazard-aware mechanism to adaptively suppress extreme deviations, leaving the optimization process vulnerable to abrupt policy shifts. To address these challenges, we propose Modulated Hazard-aware Policy Optimization (MHPO), a novel framework designed for robust and stable reinforcement learning. The proposed MHPO introduces a Log-Fidelity Modulator (LFM) to map unbounded importance ratios into a bounded, differentiable domain. This mechanism effectively prevents high-variance outlier tokens from destabilizing the loss landscape while ensuring global gradient stability. Complementarily, a Decoupled Hazard Penalty (DHP) integrates cumulative hazard functions from survival analysis to independently regulate positive and negative policy shifts. By shaping the optimization landscape with hazard-aware penalties, the proposed MHPO achieves fine-grained regulation of asymmetric policy shifts simultaneously mitigating mode collapse from over-expansion and preventing policy erosion from catastrophic contraction within a stabilized trust region. Extensive evaluations on diverse reasoning benchmarks across both text-based and vision-language tasks demonstrate that MHPO consistently outperforms existing methods, achieving superior performance while significantly enhancing training stability.",
+      "authors": [
+        "Hongjun Wang",
+        "Wei Liu",
+        "Weibo Gu",
+        "Xing Sun",
+        "Kai Han"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2026-03-14T00:45:15+00:00",
+      "link": "https://arxiv.org/pdf/2603.16929v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reinforcement learning for stable control optimization",
+      "llm_evidence_cn": "用于稳定控制优化的强化学习",
+      "llm_evidence": "用于稳定控制优化的强化学习",
+      "canonical_evidence": "用于稳定控制优化的强化学习",
+      "llm_tldr_en": "Introduces MHPO to improve training stability and gradient fidelity in reinforcement learning frameworks.",
+      "llm_tldr_cn": "引入MHPO框架以提高强化学习中的训练稳定性和梯度保真度。",
+      "llm_tldr": "引入MHPO框架以提高强化学习中的训练稳定性和梯度保真度。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
