@@ -25,3 +25,32 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: VSL RL
+      description: 查找可变限速控制和强化学习相关的学术文章与研究
+      enabled: true
+      keywords:
+        - keyword: Variable Speed Limit
+          keyword_cn: 可变限速
+          query: Variable Speed Limit (VSL) control systems in traffic management
+        - keyword: Reinforcement Learning
+          keyword_cn: 强化学习
+          query: Reinforcement learning algorithms for traffic control
+        - keyword: Freeway Control
+          keyword_cn: 高速公路控制
+          query: Freeway traffic management using variable speed limits
+        - keyword: Traffic Congestion
+          keyword_cn: 交通拥堵
+          query: Mitigating traffic congestion through speed limit optimization
+      intent_queries:
+        - query: Reinforcement learning algorithms for variable speed limit control
+          query_cn: 用于可变限速控制的强化学习算法
+          enabled: true
+          source: manual
+          note: ''
+        - query: Optimization of variable speed limits using machine learning
+          query_cn: 利用机器学习优化可变限速
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-03-21T11:29:30.568Z'
