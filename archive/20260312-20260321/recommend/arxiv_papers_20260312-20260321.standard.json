@@ -1,0 +1,474 @@
+{
+  "mode": "standard",
+  "generated_at": "2026-03-21T11:33:08.186388+00:00",
+  "stats": {
+    "mode": "standard",
+    "tag_count": 1,
+    "deep_divecandidates": 3,
+    "deep_cap": 6,
+    "deep_selected": 3,
+    "quick_candidates": 9,
+    "quick_skim_target": 11,
+    "quick_selected": 9
+  },
+  "deep_dive": [
+    {
+      "id": "2603.17981v1",
+      "title": "A Convex Formulation of the Multi-Commodity Dynamic Traffic Assignment",
+      "abstract": "We consider a multi-commodity Dynamic Traffic Assignment (DTA) problem formulated as a network flow control problem on the Cell Transmission Model (CTM). The objective is to design optimal control policies using variable speed limits, ramp metering, and dynamic routing to regulate traffic evolution over time on a given limited-capacity transportation network. Even simple instances of DTA problems on the CTM are known to give rise to non-convex optimal control formulations. Nevertheless, a single-commodity DTA formulation has recently been proposed that admits a tight convex relaxation, thereby enabling tractable optimal control synthesis. The single-commodity formulation, however, is structurally restrictive, as it effectively allows only a single destination. To address this limitation, we develop a multi-commodity CTM model in which each commodity is associated with potentially distinct sets of off-ramps. By extending the convexification approach developed for the single-commodity case, we establish a tight convex relaxation of the multi-commodity DTA problem on the CTM model. This relaxation relies on concave, commodity-specific demand functions and concave aggregate supply functions for every cell, which ensure convexity of the resulting optimal control problem. Our proposed formulation requires commodity-dependent implementation of variable speed limits and dynamic routing policies.",
+      "authors": [
+        "Davide Sipione",
+        "Giacomo Como",
+        "Gustav Nilsson"
+      ],
+      "primary_category": "math.OC",
+      "categories": [
+        "math.OC"
+      ],
+      "published": "2026-03-18T17:43:14+00:00",
+      "link": "https://arxiv.org/pdf/2603.17981v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 9.0,
+      "llm_evidence_en": "optimal control policies using variable speed limits",
+      "llm_evidence_cn": "使用可变限速的最优控制策略",
+      "llm_evidence": "使用可变限速的最优控制策略",
+      "canonical_evidence": "使用可变限速的最优控制策略",
+      "llm_tldr_en": "Develops a convex formulation for dynamic traffic assignment using variable speed limits and ramp metering.",
+      "llm_tldr_cn": "为使用可变限速和匝道控制的动态交通分配开发了一种凸公式方法。",
+      "llm_tldr": "为使用可变限速和匝道控制的动态交通分配开发了一种凸公式方法。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Variable Speed Limit (VSL) control systems in traffic management",
+      "matched_requirement_id": "req-1",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.12096v1",
+      "title": "A Robust and Efficient Multi-Agent Reinforcement Learning Framework for Traffic Signal Control",
+      "abstract": "Reinforcement Learning (RL) in Traffic Signal Control (TSC) faces significant hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations. Existing approaches often overfit static patterns and use action spaces incompatible with driver expectations. This paper proposes a robust Multi-Agent Reinforcement Learning (MARL) framework validated in the Vissim traffic simulator. The framework integrates three mechanisms: (1) Turning Ratio Randomization, a training strategy that exposes agents to dynamic turning probabilities to enhance robustness against unseen scenarios; (2) a stability-oriented Exponential Phase Duration Adjustment action space, which balances responsiveness and precision through cyclical, exponential phase adjustments; and (3) a Neighbor-Based Observation scheme utilizing the MAPPO algorithm with Centralized Training with Decentralized Execution (CTDE). By leveraging centralized updates, this approach approximates the efficacy of global observations while maintaining scalable local communication. Experimental results demonstrate that our framework outperforms standard RL baselines, reducing average waiting time by over 10%. The proposed model exhibits superior generalization in unseen traffic scenarios and maintains high control stability, offering a practical solution for adaptive signal control.",
+      "authors": [
+        "Sheng-You Huang",
+        "Hsiao-Chuan Chang",
+        "Yen-Chi Chen",
+        "Ting-Han Wei",
+        "I-Hau Yeh",
+        "Sheng-Yao Kuan",
+        "Chien-Yao Wang",
+        "Hsuan-Han Lee",
+        "I-Chen Wu"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-12T16:02:28+00:00",
+      "link": "https://arxiv.org/pdf/2603.12096v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Multi-Agent Reinforcement Learning for traffic signal control",
+      "llm_evidence_cn": "用于交通信号控制的多智能体强化学习",
+      "llm_evidence": "用于交通信号控制的多智能体强化学习",
+      "canonical_evidence": "用于交通信号控制的多智能体强化学习",
+      "llm_tldr_en": "Proposes a robust MARL framework for traffic signal control to improve generalization in dynamic traffic flows.",
+      "llm_tldr_cn": "提出一种鲁棒的多智能体强化学习框架，用于提升交通信号控制在动态流量下的泛化能力。",
+      "llm_tldr": "提出一种鲁棒的多智能体强化学习框架，用于提升交通信号控制在动态流量下的泛化能力。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "id": "2603.15283v1",
+      "title": "Evaluating the Robustness of Reinforcement Learning based Adaptive Traffic Signal Control",
+      "abstract": "Reinforcement learning (RL) has attracted increasing interest for adaptive traffic signal control due to its model-free ability to learn control policies directly from interaction with the traffic environment. However, several challenges remain before RL-based signal control can be considered ready for field deployment. Many existing studies rely on simplified signal timing structures, robustness of trained models under varying traffic demand conditions remains insufficiently evaluated, and runtime efficiency continues to pose challenges when training RL algorithms in traffic microscopic simulation environments. This study formulates an RL-based signal control algorithm capable of representing a full eight-phase ring-barrier configuration consistent with field signal controllers. The algorithm is trained and evaluated under varying traffic demand conditions and benchmarked against state-of-the-practice actuated signal control (ASC). To assess robustness, experiments are conducted across multiple traffic volumes and origin-destination (O-D) demand patterns with varying levels of structural similarity. To improve training efficiency, a distributed asynchronous training architecture is implemented that enables parallel simulation across multiple computing nodes. Results from a case study intersection show that the proposed RL-based signal control significantly outperforms optimized ASC, reducing average delay by 11-32% across movements. A model trained on a single O-D pattern generalizes well to similar unseen demand patterns but degrades under substantially different demand conditions. In contrast, a model trained on diverse O-D patterns demonstrates strong robustness, consistently outperforming ASC even under highly dissimilar unseen demand scenarios.",
+      "authors": [
+        "Dickens Kwesiga",
+        "Angshuman Guin",
+        "Khaled Abdelghany",
+        "Michael Hunter"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2026-03-16T13:47:08+00:00",
+      "link": "https://arxiv.org/pdf/2603.15283v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 8.0,
+      "llm_evidence_en": "Reinforcement learning based adaptive traffic signal control and robustness evaluation",
+      "llm_evidence_cn": "基于强化学习的自适应交通信号控制及其鲁棒性评估",
+      "llm_evidence": "基于强化学习的自适应交通信号控制及其鲁棒性评估",
+      "canonical_evidence": "基于强化学习的自适应交通信号控制及其鲁棒性评估",
+      "llm_tldr_en": "Evaluates the robustness and efficiency of RL-based traffic signal control in microscopic simulations.",
+      "llm_tldr_cn": "在微观仿真环境中评估了基于强化学习的交通信号控制的鲁棒性和效率。",
+      "llm_tldr": "在微观仿真环境中评估了基于强化学习的交通信号控制的鲁棒性和效率。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "quick_skim": [
+    {
+      "id": "2603.11433v1",
+      "title": "Adversarial Reinforcement Learning for Detecting False Data Injection Attacks in Vehicular Routing",
+      "abstract": "In modern transportation networks, adversaries can manipulate routing algorithms using false data injection attacks, such as simulating heavy traffic with multiple devices running crowdsourced navigation applications, to mislead vehicles toward suboptimal routes and increase congestion. To address these threats, we formulate a strategically zero-sum game between an attacker, who injects such perturbations, and a defender, who detects anomalies based on the observed travel times of network edges. We propose a computational method based on multi-agent reinforcement learning to compute a Nash equilibrium of this game, providing an optimal detection strategy, which ensures that total travel time remains within a worst-case bound, even in the presence of an attack. We present an extensive experimental evaluation that demonstrates the robustness and practical benefits of our approach, providing a powerful framework to improve the resilience of transportation networks against false data injection. In particular, we show that our approach yields approximate equilibrium policies and significantly outperforms baselines for both the attacker and the defender.",
+      "authors": [
+        "Taha Eghtesad",
+        "Yevgeniy Vorobeychik",
+        "Aron Laszka"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-03-12T01:53:52+00:00",
+      "link": "https://arxiv.org/pdf/2603.11433v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "multi-agent reinforcement learning for traffic routing and congestion",
+      "llm_evidence_cn": "用于交通路由和拥堵的多智能体强化学习",
+      "llm_evidence": "用于交通路由和拥堵的多智能体强化学习",
+      "canonical_evidence": "用于交通路由和拥堵的多智能体强化学习",
+      "llm_tldr_en": "Applies multi-agent RL to detect false data injection attacks that cause traffic congestion in routing.",
+      "llm_tldr_cn": "应用多智能体强化学习来检测导致交通路由拥堵的虚假数据注入攻击。",
+      "llm_tldr": "应用多智能体强化学习来检测导致交通路由拥堵的虚假数据注入攻击。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.11600v1",
+      "title": "Hybrid Energy-Aware Reward Shaping: A Unified Lightweight Physics-Guided Methodology for Policy Optimization",
+      "abstract": "Deep reinforcement learning excels in continuous control but often requires extensive exploration, while physics-based models demand complete equations and suffer cubic complexity. This study proposes Hybrid Energy-Aware Reward Shaping (H-EARS), unifying potential-based reward shaping with energy-aware action regularization. H-EARS constrains action magnitude while balancing task-specific and energy-based potentials via functional decomposition, achieving linear complexity O(n) by capturing dominant energy components without full dynamics. We establish a theoretical foundation including: (1) functional independence for separate task/energy optimization; (2) energy-based convergence acceleration; (3) convergence guarantees under function approximation; and (4) approximate potential error bounds. Lyapunov stability connections are analyzed as heuristic guides. Experiments across baselines show improved convergence, stability, and energy efficiency. Vehicle simulations validate applicability in safety-critical domains under extreme conditions. Results confirm that integrating lightweight physics priors enhances model-free RL without complete system models, enabling transfer from lab research to industrial applications.",
+      "authors": [
+        "Qijun Liao",
+        "Jue Yang",
+        "Yiting Kang",
+        "Xinxin Zhao",
+        "Yong Zhang",
+        "Mingan Zhao"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "eess.SY",
+        "math.OC"
+      ],
+      "published": "2026-03-12T06:47:01+00:00",
+      "link": "https://arxiv.org/pdf/2603.11600v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Reinforcement learning for continuous control and policy optimization",
+      "llm_evidence_cn": "用于连续控制和策略优化的强化学习",
+      "llm_evidence": "用于连续控制和策略优化的强化学习",
+      "canonical_evidence": "用于连续控制和策略优化的强化学习",
+      "llm_tldr_en": "Proposes a physics-guided reward shaping method for reinforcement learning in continuous control tasks.",
+      "llm_tldr_cn": "提出了一种用于连续控制任务中强化学习的物理引导奖励塑造方法。",
+      "llm_tldr": "提出了一种用于连续控制任务中强化学习的物理引导奖励塑造方法。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16599v1",
+      "title": "Data-driven generalized perimeter control: Zürich case study",
+      "abstract": "Urban traffic congestion is a key challenge for the development of modern cities, requiring advanced control techniques to optimize existing infrastructures usage. Despite the extensive availability of data, modeling such complex systems remains an expensive and time consuming step when designing model-based control approaches. On the other hand, machine learning approaches require simulations to bootstrap models, or are unable to deal with the sparse nature of traffic data and enforce hard constraints. We propose a novel formulation of traffic dynamics based on behavioral systems theory and apply data-enabled predictive control to steer traffic dynamics via dynamic traffic light control. A high-fidelity simulation of the city of Zürich, the largest closed-loop microscopic simulation of urban traffic in the literature to the best of our knowledge, is used to validate the performance of the proposed method in terms of total travel time and CO2 emissions.",
+      "authors": [
+        "Alessio Rimoldi",
+        "Carlo Cenedese",
+        "Alberto Padoan",
+        "Florian Dörfler",
+        "John Lygeros"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY",
+        "cs.AI",
+        "cs.CE",
+        "cs.ET"
+      ],
+      "published": "2026-03-17T14:45:20+00:00",
+      "link": "https://arxiv.org/pdf/2603.16599v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Data-driven predictive control for urban traffic congestion and traffic light control",
+      "llm_evidence_cn": "针对城市交通拥堵和红绿灯控制的数据驱动预测控制",
+      "llm_evidence": "针对城市交通拥堵和红绿灯控制的数据驱动预测控制",
+      "canonical_evidence": "针对城市交通拥堵和红绿灯控制的数据驱动预测控制",
+      "llm_tldr_en": "Applies data-enabled predictive control to optimize urban traffic flow and mitigate congestion in Zurich.",
+      "llm_tldr_cn": "应用数据驱动的预测控制技术来优化苏黎世的城市交通流并缓解拥堵。",
+      "llm_tldr": "应用数据驱动的预测控制技术来优化苏黎世的城市交通流并缓解拥堵。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Mitigating traffic congestion through speed limit optimization",
+      "matched_requirement_id": "req-4",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.12110v1",
+      "title": "Taming the Adversary: Stable Minimax Deep Deterministic Policy Gradient via Fractional Objectives",
+      "abstract": "Reinforcement learning (RL) has achieved remarkable success in a wide range of control and decision-making tasks. However, RL agents often exhibit unstable or degraded performance when deployed in environments subject to unexpected external disturbances and model uncertainties. Consequently, ensuring reliable performance under such conditions remains a critical challenge. In this paper, we propose minimax deep deterministic policy gradient (MMDDPG), a framework for learning disturbance-resilient policies in continuous control tasks. The training process is formulated as a minimax optimization problem between a user policy and an adversarial disturbance policy. In this problem, the user learns a robust policy that minimizes the objective function, while the adversary generates disturbances that maximize it. To stabilize this interaction, we introduce a fractional objective that balances task performance and disturbance magnitude. This objective prevents excessively aggressive disturbances and promotes robust learning. Experimental evaluations in MuJoCo environments demonstrate that the proposed MMDDPG achieves significantly improved robustness against both external force perturbations and model parameter variations.",
+      "authors": [
+        "Taeho Lee",
+        "Donghwan Lee"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-12T16:15:06+00:00",
+      "link": "https://arxiv.org/pdf/2603.12110v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "robust reinforcement learning for continuous control tasks",
+      "llm_evidence_cn": "用于连续控制任务的鲁棒强化学习",
+      "llm_evidence": "用于连续控制任务的鲁棒强化学习",
+      "canonical_evidence": "用于连续控制任务的鲁棒强化学习",
+      "llm_tldr_en": "Proposes a minimax DDPG framework to improve RL stability and robustness in continuous control environments.",
+      "llm_tldr_cn": "提出了一种极小极大DDPG框架，以提高连续控制环境中强化学习的稳定性和鲁棒性。",
+      "llm_tldr": "提出了一种极小极大DDPG框架，以提高连续控制环境中强化学习的稳定性和鲁棒性。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.18396v1",
+      "title": "RE-SAC: Disentangling aleatoric and epistemic risks in bus fleet control: A stable and robust ensemble DRL approach",
+      "abstract": "Bus holding control is challenging due to stochastic traffic and passenger demand. While deep reinforcement learning (DRL) shows promise, standard actor-critic algorithms suffer from Q-value instability in volatile environments. A key source of this instability is the conflation of two distinct uncertainties: aleatoric uncertainty (irreducible noise) and epistemic uncertainty (data insufficiency). Treating these as a single risk leads to value underestimation in noisy states, causing catastrophic policy collapse. We propose a robust ensemble soft actor-critic (RE-SAC) framework to explicitly disentangle these uncertainties. RE-SAC applies Integral Probability Metric (IPM)-based weight regularization to the critic network to hedge against aleatoric risk, providing a smooth analytical lower bound for the robust Bellman operator without expensive inner-loop perturbations. To address epistemic risk, a diversified Q-ensemble penalizes overconfident value estimates in sparsely covered regions. This dual mechanism prevents the ensemble variance from misidentifying noise as a data gap, a failure mode identified in our ablation study. Experiments in a realistic bidirectional bus corridor simulation demonstrate that RE-SAC achieves the highest cumulative reward (approx. -0.4e6) compared to vanilla SAC (-0.55e6). Mahalanobis rareness analysis confirms that RE-SAC reduces Oracle Q-value estimation error by up to 62% in rare out-of-distribution states (MAE of 1647 vs. 4343), demonstrating superior robustness under high traffic variability.",
+      "authors": [
+        "Yifan Zhang",
+        "Liang Zheng"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.RO"
+      ],
+      "published": "2026-03-19T01:37:45+00:00",
+      "link": "https://arxiv.org/pdf/2603.18396v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 7.0,
+      "llm_evidence_en": "Deep reinforcement learning for bus fleet control",
+      "llm_evidence_cn": "用于公交车队控制的深度强化学习",
+      "llm_evidence": "用于公交车队控制的深度强化学习",
+      "canonical_evidence": "用于公交车队控制的深度强化学习",
+      "llm_tldr_en": "Introduces RE-SAC to handle uncertainties in bus fleet control using a stable ensemble DRL approach.",
+      "llm_tldr_cn": "引入 RE-SAC 框架，通过稳定的集成深度强化学习方法处理公交车队控制中的不确定性。",
+      "llm_tldr": "引入 RE-SAC 框架，通过稳定的集成深度强化学习方法处理公交车队控制中的不确定性。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "7"
+    },
+    {
+      "id": "2603.13842v1",
+      "title": "Fine-tuning is Not Enough: A Parallel Framework for Collaborative Imitation and Reinforcement Learning in End-to-end Autonomous Driving",
+      "abstract": "End-to-end autonomous driving is typically built upon imitation learning (IL), yet its performance is constrained by the quality of human demonstrations. To overcome this limitation, recent methods incorporate reinforcement learning (RL) through sequential fine-tuning. However, such a paradigm remains suboptimal: sequential RL fine-tuning can introduce policy drift and often leads to a performance ceiling due to its dependence on the pretrained IL policy. To address these issues, we propose PaIR-Drive, a general Parallel framework for collaborative Imitation and Reinforcement learning in end-to-end autonomous driving. During training, PaIR-Drive separates IL and RL into two parallel branches with conflict-free training objectives, enabling fully collaborative optimization. This design eliminates the need to retrain RL when applying a new IL policy. During inference, RL leverages the IL policy to further optimize the final plan, allowing performance beyond prior knowledge of IL. Furthermore, we introduce a tree-structured trajectory neural sampler to group relative policy optimization (GRPO) in the RL branch, which enhances exploration capability. Extensive analysis on NAVSIMv1 and v2 benchmark demonstrates that PaIR-Drive achieves Competitive performance of 91.2 PDMS and 87.9 EPDMS, building upon Transfuser and DiffusionDrive IL baselines. PaIR-Drive consistently outperforms existing RL fine-tuning methods, and could even correct human experts' suboptimal behaviors. Qualitative results further confirm that PaIR-Drive can effectively explore and generate high-quality trajectories.",
+      "authors": [
+        "Zhexi Lian",
+        "Haoran Wang",
+        "Xuerun Yan",
+        "Weimeng Lin",
+        "Xianhong Zhang",
+        "Yongyu Chen",
+        "Jia Hu"
+      ],
+      "primary_category": "cs.RO",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2026-03-14T08:53:47+00:00",
+      "link": "https://arxiv.org/pdf/2603.13842v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Collaborative Reinforcement Learning for autonomous driving",
+      "llm_evidence_cn": "用于自动驾驶的协同强化学习",
+      "llm_evidence": "用于自动驾驶的协同强化学习",
+      "canonical_evidence": "用于自动驾驶的协同强化学习",
+      "llm_tldr_en": "Proposes a parallel framework combining imitation and reinforcement learning for end-to-end autonomous driving.",
+      "llm_tldr_cn": "提出一种并行框架，将模仿学习与强化学习结合，用于端到端自动驾驶控制。",
+      "llm_tldr": "提出一种并行框架，将模仿学习与强化学习结合，用于端到端自动驾驶控制。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.15136v1",
+      "title": "Safe Flow Q-Learning: Offline Safe Reinforcement Learning with Reachability-Based Flow Policies",
+      "abstract": "Offline safe reinforcement learning (RL) seeks reward-maximizing policies from static datasets under strict safety constraints. Existing methods often rely on soft expected-cost objectives or iterative generative inference, which can be insufficient for safety-critical real-time control. We propose Safe Flow Q-Learning (SafeFQL), which extends FQL to safe offline RL by combining a Hamilton--Jacobi reachability-inspired safety value function with an efficient one-step flow policy. SafeFQL learns the safety value via a self-consistency Bellman recursion, trains a flow policy by behavioral cloning, and distills it into a one-step actor for reward-maximizing safe action selection without rejection sampling at deployment. To account for finite-data approximation error in the learned safety boundary, we add a conformal prediction calibration step that adjusts the safety threshold and provides finite-sample probabilistic safety coverage. Empirically, SafeFQL trades modestly higher offline training cost for substantially lower inference latency than diffusion-style safe generative baselines, which is advantageous for real-time safety-critical deployment. Across boat navigation, and Safety Gymnasium MuJoCo tasks, SafeFQL matches or exceeds prior offline safe RL performance while substantially reducing constraint violations.",
+      "authors": [
+        "Mumuksh Tayal",
+        "Manan Tayal",
+        "Ravi Prakash"
+      ],
+      "primary_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-03-16T11:28:47+00:00",
+      "link": "https://arxiv.org/pdf/2603.15136v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Safe offline reinforcement learning for safety-critical real-time control",
+      "llm_evidence_cn": "针对安全关键型实时控制的安全离线强化学习",
+      "llm_evidence": "针对安全关键型实时控制的安全离线强化学习",
+      "canonical_evidence": "针对安全关键型实时控制的安全离线强化学习",
+      "llm_tldr_en": "Proposes SafeFQL for reward-maximizing safe action selection in safety-critical control tasks.",
+      "llm_tldr_cn": "提出SafeFQL算法，用于在安全关键型控制任务中实现奖励最大化的安全动作选择。",
+      "llm_tldr": "提出SafeFQL算法，用于在安全关键型控制任务中实现奖励最大化的安全动作选择。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for variable speed limit control",
+      "matched_requirement_id": "req-5",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.16495v1",
+      "title": "ExpressMind: A Multimodal Pretrained Large Language Model for Expressway Operation",
+      "abstract": "The current expressway operation relies on rule-based and isolated models, which limits the ability to jointly analyze knowledge across different systems. Meanwhile, Large Language Models (LLMs) are increasingly applied in intelligent transportation, advancing traffic models from algorithmic to cognitive intelligence. However, general LLMs are unable to effectively understand the regulations and causal relationships of events in unconventional scenarios in the expressway field. Therefore, this paper constructs a pre-trained multimodal large language model (MLLM) for expressways, ExpressMind, which serves as the cognitive core for intelligent expressway operations. This paper constructs the industry's first full-stack expressway dataset, encompassing traffic knowledge texts, emergency reasoning chains, and annotated video events to overcome data scarcity. This paper proposes a dual-layer LLM pre-training paradigm based on self-supervised training and unsupervised learning. Additionally, this study introduces a Graph-Augmented RAG framework to dynamically index the expressway knowledge base. To enhance reasoning for expressway incident response strategies, we develop a RL-aligned Chain-of-Thought (RL-CoT) mechanism that enforces consistency between model reasoning and expert problem-solving heuristics for incident handling. Finally, ExpressMind integrates a cross-modal encoder to align the dynamic feature sequences under the visual and textual channels, enabling it to understand traffic scenes in both video and image modalities. Extensive experiments on our newly released multi-modal expressway benchmark demonstrate that ExpressMind comprehensively outperforms existing baselines in event detection, safety response generation, and complex traffic analysis. The code and data are available at: https://wanderhee.github.io/ExpressMind/.",
+      "authors": [
+        "Zihe Wang",
+        "Yihuan Wang",
+        "Haiyang Yu. Zhiyong Cui",
+        "Xiaojian Liao",
+        "Chengcheng Wang",
+        "Yonglin Tian",
+        "Yongxin Tong"
+      ],
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2026-03-17T13:22:53+00:00",
+      "link": "https://arxiv.org/pdf/2603.16495v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multimodal Large Language Model for expressway operation",
+      "llm_evidence_cn": "用于高速公路运营的多模态大语言模型",
+      "llm_evidence": "用于高速公路运营的多模态大语言模型",
+      "canonical_evidence": "用于高速公路运营的多模态大语言模型",
+      "llm_tldr_en": "Develops ExpressMind, an MLLM for expressway operations to improve cognitive intelligence in traffic management.",
+      "llm_tldr_cn": "开发了 ExpressMind 多模态大模型，作为高速公路智能运营的认知核心，提升管理智能化。",
+      "llm_tldr": "开发了 ExpressMind 多模态大模型，作为高速公路智能运营的认知核心，提升管理智能化。",
+      "llm_tags": [
+        "query:vsl-rl:composite"
+      ],
+      "matched_query_tag": "query:vsl-rl:composite",
+      "matched_query_text": "Papers central to 查找可变限速控制和强化学习相关的学术文章与研究, especially work that connects or combines: Variable Speed Limit (VSL) control systems in traffic management; Reinforcement learning algorithms for traffic control; Freeway traffic management using variable speed limits; Mitigating traffic congestion through speed limit optimization; Reinforcement learning algorithms for variable speed limit control; Optimization of variable speed limits using machine learning.",
+      "matched_requirement_id": "req-composite-vsl-rl",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    },
+    {
+      "id": "2603.19188v1",
+      "title": "Markov Potential Game and Multi-Agent Reinforcement Learning for Autonomous Driving",
+      "abstract": "Autonomous driving (AD) requires safe and reliable decision-making among interacting agents, e.g., vehicles, bicycles, and pedestrians. Multi-agent reinforcement learning (MARL) modeled by Markov games (MGs) provides a suitable framework to characterize such agents' interactions during decision-making. Nash equilibria (NEs) are often the desired solution in an MG. However, it is typically challenging to compute an NE in general-sum games, unless the game is a Markov potential game (MPG), which ensures the NE attainability under a few learning algorithms such as gradient play. However, it has been an open question how to construct an MPG and whether these construction rules are suitable for AD applications. In this paper, we provide sufficient conditions under which an MG is an MPG and show that these conditions can accommodate general driving objectives for autonomous vehicles (AVs) using highway forced merge scenarios as illustrative examples. A parameter-sharing neural network (NN) structure is designed to enable decentralized policy execution. The trained driving policy from MPGs is evaluated in both simulated and naturalistic traffic datasets. Comparative studies with single-agent RL and with human drivers whose behaviors are recorded in the traffic datasets are reported, respectively.",
+      "authors": [
+        "Huiwen Yan",
+        "Mushuang Liu"
+      ],
+      "primary_category": "eess.SY",
+      "categories": [
+        "eess.SY"
+      ],
+      "published": "2026-03-19T17:43:19+00:00",
+      "link": "https://arxiv.org/pdf/2603.19188v1",
+      "tags": [
+        "keyword:VSL RL",
+        "query:VSL RL"
+      ],
+      "llm_score": 6.0,
+      "llm_evidence_en": "Multi-Agent Reinforcement Learning for autonomous driving interactions",
+      "llm_evidence_cn": "用于自动驾驶交互的多智能体强化学习",
+      "llm_evidence": "用于自动驾驶交互的多智能体强化学习",
+      "canonical_evidence": "用于自动驾驶交互的多智能体强化学习",
+      "llm_tldr_en": "Explores Markov Potential Games in MARL to ensure Nash equilibrium attainability in autonomous driving scenarios.",
+      "llm_tldr_cn": "探讨多智能体强化学习中的马尔可夫势博弈，以确保自动驾驶场景下纳什均衡的可达性。",
+      "llm_tldr": "探讨多智能体强化学习中的马尔可夫势博弈，以确保自动驾驶场景下纳什均衡的可达性。",
+      "llm_tags": [
+        "query:vsl-rl"
+      ],
+      "matched_query_tag": "query:vsl-rl",
+      "matched_query_text": "Reinforcement learning algorithms for traffic control",
+      "matched_requirement_id": "req-2",
+      "selection_source": "fresh_fetch",
+      "quick_tier": "6"
+    }
+  ]
+}
