@@ -1,0 +1,51 @@
+{
+  "label": "2026-03-22",
+  "date": "2026-03-22",
+  "generated_at": "2026-03-22T19:36:55",
+  "count": 3,
+  "papers": [
+    {
+      "paper_id": "202603/22/2603.15180v1-iterative-learning-control-informed-reinforcement-learning-for-batch-process-control",
+      "section": "quick",
+      "title_en": "Iterative Learning Control-Informed Reinforcement Learning for Batch Process Control",
+      "authors": "Runze Lin, Ziqi Zhuo, Junghui Chen, Lei Xie, Hongye Su",
+      "date": "2026-03-16",
+      "pdf": "https://arxiv.org/pdf/2603.15180v1",
+      "score": "6.0",
+      "evidence": "自主控制方法的强化学习",
+      "tldr": "针对深度强化学习（DRL）在工业批处理控制中存在的随机不确定性及缺乏稳定性保证等问题，本文提出了一种迭代学习控制引导的强化学习（IL-CIRL）框架。该框架结合了ILC的重复性优化优势与DRL的自适应能力，通过卡尔曼滤波状态估计和双层控制架构，引导智能体学习满足约束且具备稳定性保证的策略，有效提升了批处理过程在复杂扰动下的控制性能。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "A significant limitation of Deep Reinforcement Learning (DRL) is the stochastic uncertainty in actions generated during exploration-exploitation, which poses substantial safety risks during both training and deployment. In industrial process control, the lack of formal stability and convergence guarantees further inhibits adoption of DRL methods by practitioners. Conversely, Iterative Learning Control (ILC) represents a well-established autonomous control methodology for repetitive systems, particularly in batch process optimization. ILC achieves desired control performance through iterative refinement of control laws, either between consecutive batches or within individual batches, to compensate for both repetitive and non-repetitive disturbances. This study introduces an Iterative Learning Control-Informed Reinforcement Learning (IL-CIRL) framework for training DRL controllers in dual-layer batch-to-batch and within-batch control architectures for batch processes. The proposed method incorporates Kalman filter-based state estimation within the iterative learning structure to guide DRL agents toward control policies that satisfy operational constraints and ensure stability guarantees. This approach enables the systematic design of DRL controllers for batch processes operating under multiple disturbance conditions.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/22/2603.17631v1-benchmarking-reinforcement-learning-via-stochastic-converse-optimality-generating-systems-with-known-optimal-policies",
+      "section": "quick",
+      "title_en": "Benchmarking Reinforcement Learning via Stochastic Converse Optimality: Generating Systems with Known Optimal Policies",
+      "authors": "Sinan Ibrahim, Grégoire Ouerdane, Hadi Salloum, Henni Ouerdane, Stefan Streif, Pavel Osinenko",
+      "date": "2026-03-18",
+      "pdf": "https://arxiv.org/pdf/2603.17631v1",
+      "score": "6.0",
+      "evidence": "非线性控制系统强化学习算法的基准测试",
+      "tldr": "针对强化学习算法评估受环境设计和随机性影响大、难以客观比较的问题，本文提出了一种基于随机逆最优性的基准测试框架。该框架通过为离散时间、控制仿射的非线性含噪系统设定必要充分条件，能够自动生成具有已知最优策略和价值函数的基准环境。通过同伦变换和参数随机化，该方法为精确评估RL算法提供了可重复的、具备地面真值的评估基础。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "The objective comparison of Reinforcement Learning (RL) algorithms is notoriously complex as outcomes and benchmarking of performances of different RL approaches are critically sensitive to environmental design, reward structures, and stochasticity inherent in both algorithmic learning and environmental dynamics. To manage this complexity, we introduce a rigorous benchmarking framework by extending converse optimality to discrete-time, control-affine, nonlinear systems with noise. Our framework provides necessary and sufficient conditions, under which a prescribed value function and policy are optimal for constructed systems, enabling the systematic generation of benchmark families via homotopy variations and randomized parameters. We validate it by automatically constructing diverse environments, demonstrating our framework's capacity for a controlled and comprehensive evaluation across algorithms. By assessing standard methods against a ground-truth optimum, our work delivers a reproducible foundation for precise and rigorous RL benchmarking.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/22/2603.18266v1-enactor-from-traffic-simulators-to-surrogate-world-models",
+      "section": "quick",
+      "title_en": "Enactor: From Traffic Simulators to Surrogate World Models",
+      "authors": "Yash Ranjan, Rahul Sengupta, Anand Rangarajan, Sanjay Ranka",
+      "date": "2026-03-18",
+      "pdf": "https://arxiv.org/pdf/2603.18266v1",
+      "score": "6.0",
+      "evidence": "交通模拟器智能体的代理世界模型",
+      "tldr": "针对传统交通微观仿真器行为模型过于简单且深度学习方法难以维持长期物理一致性的问题，本文提出了 Enactor。这是一个基于 Transformer 架构的以动体为中心的世界模型，能够捕捉复杂的动体间交互及路口几何特征。通过与 SUMO 联动的“仿真在环”测试，该模型在长达 4000 秒的仿真中生成了物理一致的轨迹，在交通工程指标上显著优于基准模型，且训练样本需求更少。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Traffic microsimulators are widely used to evaluate road network performance under various ``what-if\" conditions. However, the behavior models controlling the actions of the actors are overly simplistic and fails to capture realistic actor-actor interactions. Deep learning-based methods have been applied to model vehicles and pedestrians as ``agents\" responding to their surrounding ``environment\" (including lanes, signals, and neighboring agents). Although effective in learning actor-actor interaction, these approaches fail to generate physically consistent trajectories over long time periods, and they do not explicitly address the complex dynamics that arise at traffic intersections which is a critical location in urban networks. Inspired by the World Model paradigm, we have developed an actor centric generative model using transformer-based architecture that is able to capture the actor-actor interaction, at the same time understanding the geometry to the traffic intersection to generate physically grounded trajectories that are based on learned behavior. Moreover, we test the model in a live ``simulation-in-the-loop\" setting, where we generate the initial conditions of the actors using SUMO and then let the model control the dynamics of the actors. We let the simulation run for 40000 timesteps (4000 seconds), testing the performance of the model on long timerange and evaluating the trajectories on traffic engineering related metrics. Experimental results demonstrate that the proposed framework effectively captures complex actor-actor interactions and generates long-horizon, physically consistent trajectories, while requiring significantly fewer training samples than traditional agent-centric generative approaches. Our model is able to outperform the baseline in traffic related as well as aggregate metrics where our model beats the baseline by more than 10x on the KL-Divergence.",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}

@@ -6,31 +6,32 @@
 </div>
 
 ## 每次日报
-- 最新运行日期：2026-03-21
-- 运行时间：2026-03-21 19:42:49 UTC
+- 最新运行日期：2026-03-22
+- 运行时间：2026-03-22 19:36:35 UTC
 - 运行状态：成功
 - 本次总论文数：3
 - 精读区：0
 - 速读区：3
 
 ### 今日简报（AI）
-今日聚焦强化学习的性能优化，涵盖了算法可解释性、收敛加速与训练稳定性三大关键领域。
-重点关注通过可视化损失
-- 详情：[/202603/21/README](/202603/21/README)
+今日探索强化学习在工业批处理、算法基准测试及交通世界模型中的跨界融合。
+重点关注结合迭代学习控制（ILC）提升生产精度，以及通过构建已知最优策略的系统为 RL 性能评估建立硬核标准。
+建议深入了解 Enactor 框架，探索如何将传统交通模拟器高效转化为高保真的代理世界模型。
+- 详情：[/202603/22/README](/202603/22/README)
 
 ### 精读区论文标签
 - 本次无精读推荐。
 
 ### 速读区论文标签
-1. [Visualizing Critic Match Loss Landscapes for Interpretation of Online Reinforcement Learning Control Algorithms](/202603/21/2603.14535v1-visualizing-critic-match-loss-landscapes-for-interpretation-of-online-reinforcement-learning-control-algorithms)  
+1. [Iterative Learning Control-Informed Reinforcement Learning for Batch Process Control](/202603/22/2603.15180v1-iterative-learning-control-informed-reinforcement-learning-for-batch-process-control)  
    标签：评分：6.0/10、query:vsl-rl
-   evidence：在线强化学习控制的解释
-2. [Stochastic Resetting Accelerates Policy Convergence in Reinforcement Learning](/202603/21/2603.16842v1-stochastic-resetting-accelerates-policy-convergence-in-reinforcement-learning)  
+   evidence：自主控制方法的强化学习
+2. [Benchmarking Reinforcement Learning via Stochastic Converse Optimality: Generating Systems with Known Optimal Policies](/202603/22/2603.17631v1-benchmarking-reinforcement-learning-via-stochastic-converse-optimality-generating-systems-with-known-optimal-policies)  
    标签：评分：6.0/10、query:vsl-rl
-   evidence：强化学习控制中的随机重置
-3. [MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning](/202603/21/2603.16929v1-mhpo-modulated-hazard-aware-policy-optimization-for-stable-reinforcement-learning)  
+   evidence：非线性控制系统强化学习算法的基准测试
+3. [Enactor: From Traffic Simulators to Surrogate World Models](/202603/22/2603.18266v1-enactor-from-traffic-simulators-to-surrogate-world-models)  
    标签：评分：6.0/10、query:vsl-rl
-   evidence：用于稳定控制优化的强化学习
+   evidence：交通模拟器智能体的代理世界模型
 
 
 <div class="dpr-home-promo-card">
