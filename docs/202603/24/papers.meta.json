@@ -1,0 +1,93 @@
+{
+  "label": "2026-03-24",
+  "date": "2026-03-24",
+  "generated_at": "2026-03-24T19:53:09",
+  "count": 6,
+  "papers": [
+    {
+      "paper_id": "202603/24/2603.17947v1-unified-policy-value-decomposition-for-rapid-adaptation",
+      "section": "quick",
+      "title_en": "Unified Policy Value Decomposition for Rapid Adaptation",
+      "authors": "Cristiano Capone, Luca Falorsi, Andrea Ciardiello, Luca Manneschi",
+      "date": "2026-03-18",
+      "pdf": "https://arxiv.org/pdf/2603.17947v1",
+      "score": "6.0",
+      "evidence": "复杂控制系统的强化学习与快速适应框架",
+      "tldr": "针对复杂控制系统中强化学习适应慢的挑战，本文提出一种统一的策略-价值分解框架。该框架通过双线性Actor-Critic结构，使策略和价值函数共享低维目标嵌入系数，模拟生物神经元的增益调节机制。在预训练中学习通用的价值和策略基函数，测试时仅需一次前向传播即可实现对新任务的零样本适应，无需梯度更新。在MuJoCo Ant环境下的实验证明，该方法能通过目标空间插值实现高效的任务迁移。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Rapid adaptation in complex control systems remains a central challenge in reinforcement learning. We introduce a framework in which policy and value functions share a low-dimensional coefficient vector - a goal embedding - that captures task identity and enables immediate adaptation to novel tasks without retraining representations. During pretraining, we jointly learn structured value bases and compatible policy bases through a bilinear actor-critic decomposition. The critic factorizes as Q = sum_k G_k(g) y_k(s,a), where G_k(g) is a goal-conditioned coefficient vector and y_k(s,a) are learned value basis functions. This multiplicative gating - where a context signal scales a set of state-dependent bases - is reminiscent of gain modulation observed in Layer 5 pyramidal neurons, where top-down inputs modulate the gain of sensory-driven responses without altering their tuning. Building on Successor Features, we extend the decomposition to the actor, which composes a set of primitive policies weighted by the same coefficients G_k(g). At test time the bases are frozen and G_k(g) is estimated zero-shot via a single forward pass, enabling immediate adaptation to novel tasks without any gradient update. We train a Soft Actor-Critic agent on the MuJoCo Ant environment under a multi-directional locomotion objective, requiring the agent to walk in eight directions specified as continuous goal vectors. The bilinear structure allows each policy head to specialize to a subset of directions, while the shared coefficient layer generalizes across them, accommodating novel directions by interpolating in goal embedding space. Our results suggest that shared low-dimensional goal embeddings offer a general mechanism for rapid, structured adaptation in high-dimensional control, and highlight a potentially biologically plausible principle for efficient transfer in complex reinforcement learning systems.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/24/2603.18315v1-drivevlm-rl-neuroscience-inspired-reinforcement-learning-with-vision-language-models-for-safe-and-deployable-autonomous-driving",
+      "section": "quick",
+      "title_en": "DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving",
+      "authors": "Zilin Huang, Zihao Sheng, Zhengyang Wan, Yansong Qu, Junwei You, Sicong Jiang, Sikai Chen",
+      "date": "2026-03-18",
+      "pdf": "https://arxiv.org/pdf/2603.18315v1",
+      "score": "6.0",
+      "evidence": "用于安全自动驾驶的强化学习",
+      "tldr": "DriveVLM-RL是一种受神经科学启发的强化学习框架，旨在解决自动驾驶中传统RL奖励设计难和视觉语言模型（VLM）推理延迟高的问题。该框架通过双路径架构将VLM的语义理解能力转化为奖励信号，并采用异步训练机制，使VLM仅在训练阶段发挥作用。实验证明，该方法在提升驾驶安全性和泛化能力的同时，确保了部署时的实时性。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Ensuring safe decision-making in autonomous vehicles remains a fundamental challenge despite rapid advances in end-to-end learning approaches. Traditional reinforcement learning (RL) methods rely on manually engineered rewards or sparse collision signals, which fail to capture the rich contextual understanding required for safe driving and make unsafe exploration unavoidable in real-world settings. Recent vision-language models (VLMs) offer promising semantic understanding capabilities; however, their high inference latency and susceptibility to hallucination hinder direct application to real-time vehicle control. To address these limitations, this paper proposes DriveVLM-RL, a neuroscience-inspired framework that integrates VLMs into RL through a dual-pathway architecture for safe and deployable autonomous driving. The framework decomposes semantic reward learning into a Static Pathway for continuous spatial safety assessment using CLIP-based contrasting language goals, and a Dynamic Pathway for attention-gated multi-frame semantic risk reasoning using a lightweight detector and a large VLM. A hierarchical reward synthesis mechanism fuses semantic signals with vehicle states, while an asynchronous training pipeline decouples expensive VLM inference from environment interaction. All VLM components are used only during offline training and are removed at deployment, ensuring real-time feasibility. Experiments in the CARLA simulator show significant improvements in collision avoidance, task success, and generalization across diverse traffic scenarios, including strong robustness under settings without explicit collision penalties. These results demonstrate that DriveVLM-RL provides a practical paradigm for integrating foundation models into autonomous driving without compromising real-time feasibility. Demo video and code are available at: https://zilin-huang.github.io/DriveVLM-RL-website/",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/24/2603.18396v2-re-sac-disentangling-aleatoric-and-epistemic-risks-in-bus-fleet-control-a-stable-and-robust-ensemble-drl-approach",
+      "section": "quick",
+      "title_en": "RE-SAC: Disentangling aleatoric and epistemic risks in bus fleet control: A stable and robust ensemble DRL approach",
+      "authors": "Yifan Zhang, Liang Zheng",
+      "date": "2026-03-19",
+      "pdf": "https://arxiv.org/pdf/2603.18396v2",
+      "score": "6.0",
+      "evidence": "不确定性下公交车队控制的集成深度强化学习",
+      "tldr": "针对公交车队控制中随机交通和乘客需求带来的不确定性，本文提出了一种鲁棒集成软演员-评论家（RE-SAC）框架。该方法通过解耦偶然不确定性（噪声）和认知不确定性（数据不足），解决了标准DRL算法在波动环境下的Q值不稳定和策略崩溃问题。RE-SAC结合了基于IPM的权重正则化和多样化Q集成机制，在提高系统鲁棒性的同时，显著降低了分布外状态下的估值误差。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Bus holding control is challenging due to stochastic traffic and passenger demand. While deep reinforcement learning (DRL) shows promise, standard actor-critic algorithms suffer from Q-value instability in volatile environments. A key source of this instability is the conflation of two distinct uncertainties: aleatoric uncertainty (irreducible noise) and epistemic uncertainty (data insufficiency). Treating these as a single risk leads to value underestimation in noisy states, causing catastrophic policy collapse. We propose a robust ensemble soft actor-critic (RE-SAC) framework to explicitly disentangle these uncertainties. RE-SAC applies Integral Probability Metric (IPM)-based weight regularization to the critic network to hedge against aleatoric risk, providing a smooth analytical lower bound for the robust Bellman operator without expensive inner-loop perturbations. To address epistemic risk, a diversified Q-ensemble penalizes overconfident value estimates in sparsely covered regions. This dual mechanism prevents the ensemble variance from misidentifying noise as a data gap, a failure mode identified in our ablation study. Experiments in a realistic bidirectional bus corridor simulation demonstrate that RE-SAC achieves the highest cumulative reward (approx. -0.4e6) compared to vanilla SAC (-0.55e6). Mahalanobis rareness analysis confirms that RE-SAC reduces Oracle Q-value estimation error by up to 62% in rare out-of-distribution states (MAE of 1647 vs. 4343), demonstrating superior robustness under high traffic variability.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/24/2603.19579v1-pa2d-morl-pareto-ascent-directional-decomposition-based-multi-objective-reinforcement-learning",
+      "section": "quick",
+      "title_en": "PA2D-MORL: Pareto Ascent Directional Decomposition based Multi-Objective Reinforcement Learning",
+      "authors": "Tianmeng Hu, Biao Luo",
+      "date": "2026-03-20",
+      "pdf": "https://arxiv.org/pdf/2603.19579v1",
+      "score": "6.0",
+      "evidence": "用于复杂决策的多目标强化学习",
+      "tldr": "针对多目标强化学习中处理冲突目标及高维空间的挑战，本文提出PA2D-MORL算法。该方法结合帕累托上升方向进行问题分解与策略改进，利用多目标策略梯度确保所有目标共同提升。通过进化框架优化多策略并引入自适应微调，显著提升了帕累托前沿的近似质量与分布均匀性，在机器人控制任务中表现优于现有主流算法。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Multi-objective reinforcement learning (MORL) provides an effective solution for decision-making problems involving conflicting objectives. However, achieving high-quality approximations to the Pareto policy set remains challenging, especially in complex tasks with continuous or high-dimensional state-action space. In this paper, we propose the Pareto Ascent Directional Decomposition based Multi-Objective Reinforcement Learning (PA2D-MORL) method, which constructs an efficient scheme for multi-objective problem decomposition and policy improvement, leading to a superior approximation of Pareto policy set. The proposed method leverages Pareto ascent direction to select the scalarization weights and computes the multi-objective policy gradient, which determines the policy optimization direction and ensures joint improvement on all objectives. Meanwhile, multiple policies are selectively optimized under an evolutionary framework to approximate the Pareto frontier from different directions. Additionally, a Pareto adaptive fine-tuning approach is applied to enhance the density and spread of the Pareto frontier approximation. Experiments on various multi-objective robot control tasks show that the proposed method clearly outperforms the current state-of-the-art algorithm in terms of both quality and stability of the outcomes.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/24/2603.21810v1-partial-attention-in-deep-reinforcement-learning-for-safe-multi-agent-control",
+      "section": "quick",
+      "title_en": "Partial Attention in Deep Reinforcement Learning for Safe Multi-Agent Control",
+      "authors": "Turki Bin Mohaya, Peter Seiler",
+      "date": "2026-03-23",
+      "pdf": "https://arxiv.org/pdf/2603.21810v1",
+      "score": "6.0",
+      "evidence": "自动驾驶汽车高速公路汇入的多智能体强化学习",
+      "tldr": "本研究针对高速公路合流场景下的多智能体安全控制问题，提出了一种结合局部注意力机制的深度强化学习方法。在Dec-POMDP建模和QMIX框架基础上，通过引入局部注意力使每个自动驾驶车辆能聚焦于最相关的邻近车辆。同时，设计了兼顾全局交通流、安全性和个体利益的综合奖励函数。在SUMO仿真实验中，该方法在安全性、行驶速度和累积奖励方面均优于现有算法，显著提升了复杂交通环境下的协同控制性能。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "Attention mechanisms excel at learning sequential patterns by discriminating data based on relevance and importance. This provides state-of-the-art performance in advanced generative artificial intelligence models. This paper applies this concept of an attention mechanism for multi-agent safe control. We specifically consider the design of a neural network to control autonomous vehicles in a highway merging scenario. The environment is modeled as a Decentralized Partially Observable Markov Decision Process (Dec-POMDP). Within a QMIX framework, we include partial attention for each autonomous vehicle, thus allowing each ego vehicle to focus on the most relevant neighboring vehicles. Moreover, we propose a comprehensive reward signal that considers the global objectives of the environment (e.g., safety and vehicle flow) and the individual interests of each agent. Simulations are conducted in the Simulation of Urban Mobility (SUMO). The results show better performance compared to other driving algorithms in terms of safety, driving speed, and reward.",
+      "selection_source": "fresh_fetch"
+    },
+    {
+      "paper_id": "202603/24/2603.21913v1-collision-free-velocity-scheduling-for-multi-agent-systems-on-predefined-routes-via-inexact-projection-admm",
+      "section": "quick",
+      "title_en": "Collision-Free Velocity Scheduling for Multi-Agent Systems on Predefined Routes via Inexact-Projection ADMM",
+      "authors": "Seungyeop Lee, Jong-Han Kim",
+      "date": "2026-03-23",
+      "pdf": "https://arxiv.org/pdf/2603.21913v1",
+      "score": "6.0",
+      "evidence": "多智能体运输系统的速度调度与优化",
+      "tldr": "本研究针对预定义路径下的多智能体系统，提出了一种基于非精确投影交替方向乘子法（ADMM）的无碰撞速度调度方法。通过优化航点通过时间而非改变路径，利用可微代理轨迹模型捕捉动态特性，并将安全性转化为时域网格上的距离惩罚。该方法避免了复杂的整数规划，在多种拥堵场景下实现了高效、平滑的协同调度，显著缩短了任务完成时间。",
+      "tags": "query:vsl-rl",
+      "abstract_en": "In structured multi-agent transportation systems, agents often must follow predefined routes, making spatial rerouting undesirable or impossible. This paper addresses route-constrained multi-agent coordination by optimizing waypoint passage times while preserving each agent's assigned waypoint order and nominal route assignment. A differentiable surrogate trajectory model maps waypoint timings to smooth position profiles and captures first-order tracking lag, enabling pairwise safety to be encoded through distance-based penalties evaluated on a dense temporal grid spanning the mission horizon. The resulting nonlinear and nonconvex velocity-scheduling problem is solved using an inexact-projection Alternating Direction Method of Multipliers (ADMM) algorithm that combines structured timing updates with gradient-based collision-correction steps and avoids explicit integer sequencing variables. Numerical experiments on random-crossing, bottleneck, and graph-based network scenarios show that the proposed method computes feasible and time-efficient schedules across a range of congestion levels and yields shorter mission completion times than a representative hierarchical baseline in the tested bottleneck cases.",
+      "selection_source": "fresh_fetch"
+    }
+  ],
+  "errors": []
+}
